@@ -15,19 +15,19 @@ const ProfilePage = () => {
   return (
     <div>
       <nav className="main-nav">
-        <a className="main-nav-logo" href="./index.html">
+        <Link className="main-nav-logo" to="/">
           <img
             className="main-nav-logo-image"
             src="./img/argentBankLogo.png"
             alt="Argent Bank Logo"
           />
           <h1 className="sr-only">Argent Bank</h1>
-        </a>
+        </Link>
         <div>
-          <a className="main-nav-item" href="./user.html">
+          <Link className="main-nav-item" to="./user.html">
             <i className="fa fa-user-circle"></i>
             {user?.firstName} {/* Affiche le prénom de l'utilisateur */}
-          </a>
+          </Link>
           <Link className="main-nav-item" to="/" onClick={handleLogout}>
             <i className="fa fa-sign-out"></i>
             Sign Out
