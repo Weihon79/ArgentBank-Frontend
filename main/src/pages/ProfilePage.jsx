@@ -46,7 +46,7 @@ const ProfilePage = () => {
       <main className="main bg-dark">
         <div className="header">
           {/* Message de bienvenue avec le prénom et nom de l'utilisateur */}
-          <h1>Welcome back<br />{user?.firstName} {user?.lastName}!</h1>
+          <h1>Welcome back<br />{user ? `${user.firstName} ${user.lastName}` : 'Loading...'}</h1>
           <button className="edit-button">Edit Name</button> {/* Bouton prévu pour modifier le nom */}
         </div>
 
