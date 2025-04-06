@@ -4,6 +4,7 @@ import AppRouter from "./Router";
 import { Provider } from "react-redux";
 import store from "./store";
 import "./styles/index.css";
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

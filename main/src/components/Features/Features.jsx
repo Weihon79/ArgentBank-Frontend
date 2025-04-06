@@ -23,7 +23,7 @@ const Features = () => {
       imgAlt: "Security Icon",
       title: "Security you can trust",
       description:
-        "We use top-of-the-line encryption to make sure your data and money are always safe.",
+        "We use top of the line encryption to make sure your data and money is always safe.",
     },
   ];
 
