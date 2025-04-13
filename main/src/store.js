@@ -8,4 +8,4 @@ const store = configureStore({
 });
 
 export default store;
-// Suite logique dans le fichier index.js.
+
