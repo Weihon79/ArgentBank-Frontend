@@ -3,7 +3,7 @@ import authReducer from "./features/authSlice";
 
 const store = configureStore({
   reducer: {
-    auth: authReducer, // 28. Ajouter le reducer auth pour gérer l'état global de l'authentification.
+    auth: authReducer, //Le reducer auth pour gérer l'état global de l'authentification. Nommé "auth" dans authSlice
   },
 });
 
