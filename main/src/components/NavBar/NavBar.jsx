@@ -10,6 +10,7 @@ const Navbar = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
+    //setTimemout retarde la navigation, ce qui laisse React et Redux le temps de terminer les mises à jour.
     const handleLogout = () => {
         dispatch(logout());
         setTimeout(() => {
