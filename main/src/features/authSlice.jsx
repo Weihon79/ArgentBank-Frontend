@@ -31,6 +31,12 @@ const authSlice = createSlice({
   },
 });
 
+// Sélecteurs ajoutés ici
+export const selectToken = (state) => state.auth.token;
+export const selectIsAuthenticated = (state) => state.auth.isAuthenticated;
+export const selectUser = (state) => state.auth.user;
+
+// Propagation des actions dans toute l'application
 export const { loginSuccess, loginFailure, logout, setUser } =
   authSlice.actions;
 export default authSlice.reducer;

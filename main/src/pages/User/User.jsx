@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { setUser } from "../../features/authSlice";
+import { selectToken, selectUser, setUser } from "../../features/authSlice";
 import AccountItem from "./AccountItem"; 
 import "./User.css";
 
 const User = () => {
-  const user = useSelector((state) => state.auth.user);
-  const token = useSelector((state) => state.auth.token);
+  const user = useSelector(selectUser);
+  const token = useSelector(selectToken);
   const dispatch = useDispatch();
 
   const [isEditing, setIsEditing] = useState(false);

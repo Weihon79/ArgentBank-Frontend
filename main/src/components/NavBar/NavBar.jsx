@@ -1,12 +1,12 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { logout } from "../../features/authSlice";
+import { logout, selectIsAuthenticated, selectUser } from "../../features/authSlice";
 import "./NavBar.css"
 
 const Navbar = () => {
-    const isAuthenticated = useSelector((state) => state.isAuthenticated);
-    const user = useSelector((state) => state.auth.user)
+    const isAuthenticated = useSelector(selectIsAuthenticated);
+    const user = useSelector(selectUser)
     const dispatch = useDispatch();
     const navigate = useNavigate();
 

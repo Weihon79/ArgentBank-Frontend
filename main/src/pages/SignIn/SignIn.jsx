@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Navigate } from "react-router-dom";
-import { loginSuccess, loginFailure, setUser } from "../../features/authSlice";
+import { loginSuccess, loginFailure, setUser, selectIsAuthenticated } from "../../features/authSlice";
 import "./SignIn.css";
 
 const SignIn = () => {
   const [email, setEmail] = useState(""); 
   const [password, setPassword] = useState(""); 
   const [errorMessage, setErrorMessage] = useState(""); 
-  const isAuthenticated = useSelector((state) => state.auth.isAuthenticated); 
+  const isAuthenticated = useSelector(selectIsAuthenticated); 
   const dispatch = useDispatch();
 
   const handleSubmit = async (e) => {
